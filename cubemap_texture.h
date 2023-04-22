@@ -21,7 +21,7 @@
 
 #include <string>
 #include <GL/glew.h>
-#include <ImageMagick/Magick++.h>
+#include <Magick++.h>
 
 using namespace std;
 
