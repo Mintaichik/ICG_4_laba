@@ -16,25 +16,38 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef CALLBACKS_H
-#define	CALLBACKS_H
+#ifndef CUBEMAP_H
+#define	CUBEMAP_H
 
-class ICallbacks
+#include <string>
+#include <GL/glew.h>
+#include <ImageMagick/Magick++.h>
+
+using namespace std;
+
+class CubemapTexture
 {
 public:
-
-    virtual void SpecialKeyboardCB(int Key, int x, int y) = 0;
-
-    virtual void KeyboardCB(unsigned char Key, int x, int y) = 0;
-
-    virtual void PassiveMouseCB(int x, int y) = 0;
-
-    virtual void RenderSceneCB() = 0;
-
-    virtual void IdleCB() = 0;
     
-    //virtual ~ICallbacks() {};
+    CubemapTexture(const string& Directory,
+                   const string& PosXFilename,
+                   const string& NegXFilename,
+                   const string& PosYFilename,
+                   const string& NegYFilename,
+                   const string& PosZFilename,
+                   const string& NegZFilename);
+
+    ~CubemapTexture();
+    
+    bool Load();
+
+    void Bind(GLenum TextureUnit);
+
+private:
+   
+    string m_fileNames[6];
+    GLuint m_textureObj;
 };
 
-#endif	/* I3DAPPLICATION_H */
+#endif	/* CUBEMAP_H */
 
