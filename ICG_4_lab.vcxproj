@@ -134,6 +134,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="camera.cpp" />
+    <ClCompile Include="cubemap_texture.cpp" />
     <ClCompile Include="glut_backend.cpp" />
     <ClCompile Include="ICG_4_lab.cpp" />
     <ClCompile Include="lighting_technique.cpp" />
@@ -143,6 +144,7 @@
     <ClCompile Include="shadow_map_fbo.cpp" />
     <ClCompile Include="shadow_map_technique.cpp" />
     <ClCompile Include="skybox.cpp" />
+    <ClCompile Include="skybox_technique.cpp" />
     <ClCompile Include="technique.cpp" />
     <ClCompile Include="texture.cpp" />
   </ItemGroup>
@@ -152,6 +154,7 @@
   <ItemGroup>
     <ClInclude Include="callbacks.h" />
     <ClInclude Include="camera.h" />
+    <ClInclude Include="cubemap_texture.h" />
     <ClInclude Include="glut_backend.h" />
     <ClInclude Include="lighting_technique.h" />
     <ClInclude Include="math_3d.h" />
@@ -160,6 +163,7 @@
     <ClInclude Include="shadow_map_fbo.h" />
     <ClInclude Include="shadow_map_technique.h" />
     <ClInclude Include="skybox.h" />
+    <ClInclude Include="skybox_technique.h" />
     <ClInclude Include="technique.h" />
     <ClInclude Include="texture.h" />
     <ClInclude Include="util.h" />
