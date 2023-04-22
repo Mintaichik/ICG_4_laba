@@ -1,4 +1,4 @@
-#include <io.h>
+#include <unistd.h>
 #include <stdio.h>
 #include <GL/glew.h>
 #include <GL/freeglut.h>
